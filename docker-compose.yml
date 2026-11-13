@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    cpus: 1
+    mem_limit: 768m
+    environment:
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_HOST: '%'
+      TZ: Asia/Bangkok
+    ports:
+      # ล็อกไว้ที่ 127.0.0.1 ปลอดภัยจากการโดนยิงตรงจากภายนอก
+      - "127.0.0.1:3311:3306"
+    volumes:
+      - asset_db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "--silent"]  # ไม่ใส่รหัส: ping คืน 0 แม้ access denied, ใช้ TCP เพื่อไม่ผ่านตอน init
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 120s  # DB image tag ลอย อาจอัปเกรด minor ตอน start ~60 วินาที (บทเรียน 2026-10-27)
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    cpus: 1
+    mem_limit: 512m
+    environment:
+      - TZ=Asia/Bangkok
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+      # ประกอบ DATABASE_URL เพื่อให้ Next.js และ Prisma ใช้เชื่อมต่อ
+      - DATABASE_URL=mysql://${DB_USER}:${DB_PASSWORD}@db:3306/${DB_NAME}
+      - NEXTAUTH_URL=${NEXTAUTH_URL}
+      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
+    # บอกให้ Coolify รู้ว่า Next.js เปิดประตูรอรับแขกอยู่ที่พอร์ต 3000
+    expose:
+      - "3000"
+    volumes:
+      # พื้นที่เก็บไฟล์อัปโหลด ไม่ให้หายตอนอัปเดตเว็บ
+      - app_uploads:/app/public/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+
+# ประกาศชื่อถังเก็บข้อมูลให้ตรงกับที่เรียกใช้ด้านบน
+volumes:
+  asset_db_data: {}
+  app_uploads: {}

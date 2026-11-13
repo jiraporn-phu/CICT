@@ -1,0 +1,146 @@
+app-1  | ▲ Next.js 16.1.6
+app-1  | - Local:         http://a3eed49148d2:3000
+app-1  | - Network:       http://a3eed49148d2:3000
+app-1  | 
+app-1  | ✓ Starting...
+app-1  | ✓ Ready in 238ms
+app-1  | Upload error: Error: EACCES: permission denied, open '/app/public/uploads/1775537265270-0e6q1l.jpg'
+app-1  |     at async C (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:2260)
+app-1  |     at async d (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:5432)
+app-1  |     at async l (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:6473)
+app-1  |     at async Module.q (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:7551) {
+app-1  |   errno: -13,
+app-1  |   code: 'EACCES',
+app-1  |   syscall: 'open',
+app-1  |   path: '/app/public/uploads/1775537265270-0e6q1l.jpg'
+app-1  | }
+app-1  | Upload error: Error: EACCES: permission denied, open '/app/public/uploads/1775537328273-vxm2a5.jpg'
+app-1  |     at async C (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:2260)
+app-1  |     at async d (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:5432)
+app-1  |     at async l (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:6473)
+app-1  |     at async Module.q (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:7551) {
+app-1  |   errno: -13,
+app-1  |   code: 'EACCES',
+app-1  |   syscall: 'open',
+app-1  |   path: '/app/public/uploads/1775537328273-vxm2a5.jpg'
+app-1  | }
+app-1  | Upload error: Error: EACCES: permission denied, open '/app/public/uploads/1775537342601-nrf995.jpg'
+app-1  |     at async C (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:2260)
+app-1  |     at async d (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:5432)
+app-1  |     at async l (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:6473)
+app-1  |     at async Module.q (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:7551) {
+app-1  |   errno: -13,
+app-1  |   code: 'EACCES',
+app-1  |   syscall: 'open',
+app-1  |   path: '/app/public/uploads/1775537342601-nrf995.jpg'
+app-1  | }
+app-1  | Upload error: Error: EACCES: permission denied, open '/app/public/uploads/1775537379090-gtglgs.jpg'
+app-1  |     at async C (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:2260)
+app-1  |     at async d (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:5432)
+app-1  |     at async l (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:6473)
+app-1  |     at async Module.q (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:7551) {
+app-1  |   errno: -13,
+app-1  |   code: 'EACCES',
+app-1  |   syscall: 'open',
+app-1  |   path: '/app/public/uploads/1775537379090-gtglgs.jpg'
+app-1  | }
+app-1  | Upload error: Error: EACCES: permission denied, open '/app/public/uploads/1775537599411-w8cecq.jpg'
+app-1  |     at async C (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:2260)
+app-1  |     at async d (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:5432)
+app-1  |     at async l (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:6473)
+app-1  |     at async Module.q (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:7551) {
+app-1  |   errno: -13,
+app-1  |   code: 'EACCES',
+app-1  |   syscall: 'open',
+app-1  |   path: '/app/public/uploads/1775537599411-w8cecq.jpg'
+app-1  | }
+app-1  | Upload error: Error: EACCES: permission denied, open '/app/public/uploads/1775539260397-vu9d7j.jpg'
+app-1  |     at async C (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:2260)
+app-1  |     at async d (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:5432)
+app-1  |     at async l (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:6473)
+app-1  |     at async Module.q (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:7551) {
+app-1  |   errno: -13,
+app-1  |   code: 'EACCES',
+app-1  |   syscall: 'open',
+app-1  |   path: '/app/public/uploads/1775539260397-vu9d7j.jpg'
+app-1  | }
+app-1  | Upload error: Error: EACCES: permission denied, open '/app/public/uploads/1775539266146-3ocoop.jpg'
+app-1  |     at async C (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:2260)
+app-1  |     at async d (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:5432)
+app-1  |     at async l (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:6473)
+app-1  |     at async Module.q (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:7551) {
+app-1  |   errno: -13,
+app-1  |   code: 'EACCES',
+app-1  |   syscall: 'open',
+app-1  |   path: '/app/public/uploads/1775539266146-3ocoop.jpg'
+app-1  | }
+app-1  | Upload error: Error: EACCES: permission denied, open '/app/public/uploads/1775539267139-2eaapi.jpg'
+app-1  |     at async C (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:2260)
+app-1  |     at async d (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:5432)
+app-1  |     at async l (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:6473)
+app-1  |     at async Module.q (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:7551) {
+app-1  |   errno: -13,
+app-1  |   code: 'EACCES',
+app-1  |   syscall: 'open',
+app-1  |   path: '/app/public/uploads/1775539267139-2eaapi.jpg'
+app-1  | }
+app-1  | Upload error: Error: EACCES: permission denied, open '/app/public/uploads/1775539267983-lzksl8.jpg'
+app-1  |     at async C (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:2260)
+app-1  |     at async d (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:5432)
+app-1  |     at async l (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:6473)
+app-1  |     at async Module.q (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:7551) {
+app-1  |   errno: -13,
+app-1  |   code: 'EACCES',
+app-1  |   syscall: 'open',
+app-1  |   path: '/app/public/uploads/1775539267983-lzksl8.jpg'
+app-1  | }
+app-1  | Upload error: Error: EACCES: permission denied, open '/app/public/uploads/1775539268409-4io3pp.jpg'
+app-1  |     at async C (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:2260)
+app-1  |     at async d (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:5432)
+app-1  |     at async l (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:6473)
+app-1  |     at async Module.q (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:7551) {
+app-1  |   errno: -13,
+app-1  |   code: 'EACCES',
+app-1  |   syscall: 'open',
+app-1  |   path: '/app/public/uploads/1775539268409-4io3pp.jpg'
+app-1  | }
+app-1  | Upload error: Error: EACCES: permission denied, open '/app/public/uploads/1775539268849-ac9b4s.jpg'
+app-1  |     at async C (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:2260)
+app-1  |     at async d (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:5432)
+app-1  |     at async l (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:6473)
+app-1  |     at async Module.q (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:7551) {
+app-1  |   errno: -13,
+app-1  |   code: 'EACCES',
+app-1  |   syscall: 'open',
+app-1  |   path: '/app/public/uploads/1775539268849-ac9b4s.jpg'
+app-1  | }
+app-1  | Upload error: Error: EACCES: permission denied, open '/app/public/uploads/1775539269301-q7x147.jpg'
+app-1  |     at async C (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:2260)
+app-1  |     at async d (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:5432)
+app-1  |     at async l (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:6473)
+app-1  |     at async Module.q (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:7551) {
+app-1  |   errno: -13,
+app-1  |   code: 'EACCES',
+app-1  |   syscall: 'open',
+app-1  |   path: '/app/public/uploads/1775539269301-q7x147.jpg'
+app-1  | }
+app-1  | Upload error: Error: EACCES: permission denied, open '/app/public/uploads/1775539269734-8ueuzr.jpg'
+app-1  |     at async C (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:2260)
+app-1  |     at async d (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:5432)
+app-1  |     at async l (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:6473)
+app-1  |     at async Module.q (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:7551) {
+app-1  |   errno: -13,
+app-1  |   code: 'EACCES',
+app-1  |   syscall: 'open',
+app-1  |   path: '/app/public/uploads/1775539269734-8ueuzr.jpg'
+app-1  | }
+app-1  | Upload error: Error: EACCES: permission denied, open '/app/public/uploads/1775539270173-02nrzp.jpg'
+app-1  |     at async C (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:2260)
+app-1  |     at async d (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:5432)
+app-1  |     at async l (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:6473)
+app-1  |     at async Module.q (.next/server/chunks/[root-of-the-server]__8f04ce3b._.js:1:7551) {
+app-1  |   errno: -13,
+app-1  |   code: 'EACCES',
+app-1  |   syscall: 'open',
+app-1  |   path: '/app/public/uploads/1775539270173-02nrzp.jpg'
+app-1  | }

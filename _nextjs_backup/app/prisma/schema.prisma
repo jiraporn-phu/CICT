@@ -1,0 +1,91 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  username  String   @unique
+  password  String
+  fullName  String
+  phone     String
+  image     String?
+  department String?
+  role      String   @default("user")
+  status    String   @default("pending") // pending, active, suspended
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  borrows   BorrowTransaction[]
+  wishlist  WishlistItem[]
+
+  @@map("users")
+}
+
+model Equipment {
+  id          String   @id @default(cuid())
+  name        String
+  category    String
+  department  String   @default("IT")
+  description String?  @db.Text
+  quantity    Int      @default(1)
+  initialQuantity Int @default(1)
+  status      String   @default("available")
+  imageUrl    String?
+  location    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  borrows     BorrowTransaction[]
+  wishlistedBy WishlistItem[]
+
+  @@map("equipment")
+}
+
+model WishlistItem {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  equipmentId String
+  equipment   Equipment @relation(fields: [equipmentId], references: [id], onDelete: Cascade)
+  createdAt   DateTime  @default(now())
+
+  @@unique([userId, equipmentId])
+  @@map("wishlist_items")
+}
+
+model BorrowTransaction {
+  id              String    @id @default(cuid())
+  equipmentId     String
+  equipment       Equipment @relation(fields: [equipmentId], references: [id], onDelete: Cascade)
+  borrowerId      String
+  borrower        User      @relation(fields: [borrowerId], references: [id])
+  borrowQuantity  Int       @default(1)
+  status          String    @default("pending")
+  transactionType String    @default("BORROW") // BORROW, REQUISITION
+  borrowDate      DateTime  @default(now())
+  dueDate         DateTime
+  returnDate      DateTime?
+  beforeImageUrl  String?
+  afterImageUrl   String?
+  pickupLocation  String?
+  returnLocation  String?
+  note            String?   @db.Text
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@map("borrow_transactions")
+}
+
+model CategoryGroup {
+  id          String   @id @default(cuid())
+  name        String
+  department  String
+  createdAt   DateTime @default(now())
+  
+  @@unique([name, department])
+  @@map("category_groups")
+}
